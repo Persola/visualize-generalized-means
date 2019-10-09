@@ -1,1 +1,5 @@
+.DS_Store
 .ipynb_checkpoints/
+special_case_plots/
+animation_frame_plots/
+animations/
