@@ -1,3 +1,5 @@
+(This is a markdown version of a post originally published on Medium. Please forgive the awkward formatting.)
+
 ## Visualizing the Geometric and Harmonic Means
 
 Long after I learned how to _calculate_ the geometric and harmonic means, I was still unclear about what exactly they were doing for me. I ended up clarifying this to myself by generating a series of visualizations which I’ll show you in this post.
