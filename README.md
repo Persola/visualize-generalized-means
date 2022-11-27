@@ -88,7 +88,7 @@ Or, algorithmically:
 
 1. Take everything to the _p_ ᵗʰ power
 2. Find the arithmetic mean as you normally would
-3. Take the result to the _p_ ⁻¹ᵗʰ power (find the _p_ᵗʰ root)
+3. Take the result to the _p_ ⁻¹ᵗʰ power (find the _p_ ᵗʰ root)
 
 When _p_ is one, the first and last steps have no effect, so you’ve found the arithmetic mean.
 
