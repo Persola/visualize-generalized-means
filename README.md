@@ -1,6 +1,6 @@
-_This is a markdown version of a post originally published on Medium. There are some formatting with this version._
+_This is a markdown adaption of [a post](https://medium.com/swlh/visualizing-the-geometric-and-harmonic-means-e8b9c5a818ae) originally published on Medium. As a result there are some formatting problems. If you use dark mode __you should temporarily [switch to light mode](https://github.com/settings/appearance)__ so you can read the plots' labels._
 
-## Visualizing the Geometric and Harmonic Means
+# Visualizing the Geometric and Harmonic Means
 
 Long after I learned how to _calculate_ the geometric and harmonic means, I was still unclear about what exactly they were doing for me. I ended up clarifying this to myself by generating a series of visualizations which I’ll show you in this post.
 
@@ -9,15 +9,15 @@ First, a quick review of the algorithms themselves.
 ![Standard equations for the arithmetic, geometric, and harmonic means](./images/means_equations/pythagorean_means_labeled.png)
 <sub>The Pythagorean means. 𝑎 is a tuple/array/list. 𝑛 is the length of 𝑎. ([∑ notation](https://en.wikipedia.org/wiki/Summation#Capital-sigma_notation)) ([∏ notation](https://en.wikipedia.org/wiki/Multiplication#Capital_pi_notation))</sub>
 
-The __arithmetic mean__ is what people are usually talking about when they say “average”. By far the most widely used, it’s simple to calculate. You sum the parts, then divide by how many there were.
+The __arithmetic mean__ is what people are usually talking about when they say “average”. By far the most widely used, it’s simple to calculate: you sum the parts, then divide by how many there were.
 
 The __geometric mean__ has the same procedure but different operations. You _multiply_ the parts, then take the _root_ corresponding to how many there were. The geometric mean is often used when finding the mean of data which are measured in different units.
 
 The __harmonic mean__ is the arithmetic mean with two extra steps. First, find the multiplicative inverse of each number (for _x_, that’s 1 ÷ _x_, or _x_ ⁻¹). Then sum and divide those inverses like you would for the arithmetic mean. Then, take the inverse again. The harmonic mean is used to calculate [F₁ score](https://en.wikipedia.org/wiki/F1_score).
 
-To my eye, all the exponents jammed into the harmonic mean made it seem uglier than the other two. But as we’ll see, it’s exactly that exponentiation that will help unify our understanding of all three.
+Looking at the equations, I always thought the harmonic mean seemed less elegant than the other two, with all those exponents jammed in there. But as we’ll see, it’s exactly that exponentiation that will end up unifying our understanding of all three means.
 
-#### A Gripping Plot
+### A Gripping Plot
 
 ![Plot of the value of the arithmetic mean for numbers between 0 and 4](./images/special_case_plots/arithmetic_continuous_all_labels.png)
 
@@ -78,9 +78,9 @@ It looks similar to the geometric. Let’s plot them side by side:
 
 Again, they’re the same on the diagonal. But off to the side of the diagonal the harmonic mean is _more curved_ than the geometric, and gives even lower results for pairs that are further apart from each other.
 
-So the arithmetic mean has no curve, the geometric mean has some, and the harmonic mean has even more. The difference between them is in large part a matter of degree—of how outwardly curved they are. The stronger the curve, the lower the results of that mean when provided with dissimilar numbers. We can understand this better if we consider _all the other_ degrees of curvature a mean can have.
+So the arithmetic mean has no curve, the geometric mean has some, and the harmonic mean has even more. The difference between them is in large part a matter of degree—of how curved they are. The stronger the curve, the lower the results of that mean when provided with dissimilar numbers. We can understand this better if we consider _all the other_ degrees of curvature a mean can have.
 
-#### Generalized Means Primer
+### Generalized Means Primer
 
 All three Pythagorean means belong to a wider class of functions called [generalized means](https://en.wikipedia.org/wiki/Generalized_mean). (These are closely related to the idea of [Lᵖ spaces](https://en.wikipedia.org/wiki/Lp_space), so if you’re already comfortable with Lᵖ spaces it might be easier to think of these images as segments of circles centered on the origin in spaces of varying _p_.)
 
@@ -109,7 +109,7 @@ It turns out the geometric mean is the limit of the generalized mean as p approa
 
 OK, now we can visualize the generalized mean for any value of _p_.
 
-#### All Means Possible
+### All Means Possible
 
 First, let’s retrace the steps we’ve already taken. We’ll start with the arithmetic mean and go down, pass the geometric mean at zero, and end with the harmonic mean at negative one.
 
