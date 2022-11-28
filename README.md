@@ -1,4 +1,4 @@
-_This is a markdown adaption of [a post](https://medium.com/swlh/visualizing-the-geometric-and-harmonic-means-e8b9c5a818ae) originally published on Medium. As a result there are some formatting problems. If you use dark mode __you should temporarily [switch to light mode](https://github.com/settings/appearance)__ so you can read the plots' labels._
+_This is a markdown adaptation of a post originally [published on Medium](https://medium.com/swlh/visualizing-the-geometric-and-harmonic-means-e8b9c5a818ae). As a result there are some formatting problems. If you use dark mode __you should [switch to light mode](https://github.com/settings/appearance)__ temporarily so you can read the plots' labels._
 
 # Visualizing the Geometric and Harmonic Means
 
@@ -6,7 +6,7 @@ Long after I learned how to _calculate_ the geometric and harmonic means, I was 
 
 First, a quick review of the algorithms themselves.
 
-![Standard equations for the arithmetic, geometric, and harmonic means](./images/means_equations/pythagorean_means_labeled.png)
+![Standard equations for the arithmetic, geometric, and harmonic means](./handmade_images/means_equations/pythagorean_means_labeled.png)
 <sub>The Pythagorean means. 𝑎 is a tuple/array/list. 𝑛 is the length of 𝑎. ([∑ notation](https://en.wikipedia.org/wiki/Summation#Capital-sigma_notation)) ([∏ notation](https://en.wikipedia.org/wiki/Multiplication#Capital_pi_notation))</sub>
 
 The __arithmetic mean__ is what people are usually talking about when they say “average”. By far the most widely used, it’s simple to calculate: you sum the parts, then divide by how many there were.
@@ -19,7 +19,7 @@ Looking at the equations, I always thought the harmonic mean seemed less elegant
 
 ### A Gripping Plot
 
-![Plot of the value of the arithmetic mean for numbers between 0 and 4](./images/special_case_plots/arithmetic_continuous_all_labels.png)
+![Plot of the value of the arithmetic mean for numbers between 0 and 4](./generated_visuals/special_case_plots/01_arithmetic_mean_continuous_max_4.png)
 
 <sub>The arithmetic mean</sub>
 
@@ -29,13 +29,13 @@ The order of the two numbers doesn’t matter, so the axes are interchangeable.
 
 All the plots we’ll look at today have the interesting property that their shape doesn’t change when you multiply all the numbers on their axes by the same factor[^1]. That means you can zoom in or out on the plot above and, as long as you keep the point _(0, 0)_ in the lower left corner, it won’t look any different. (You’d also have to adjust the color scale, but it’s arbitrary anyway.) So from now on, instead of thinking about specific numbers, we can just think about what _every_ plot with the origin in the lower left corner looks like:
 
-![Plot of the value of the arithmetic mean for numbers between 0 and 𝑥](./images/special_case_plots/arithmetic_continuous_one_label.png)
+![Plot of the value of the arithmetic mean for numbers between 0 and 𝑥](./generated_visuals/special_case_plots/02_arithmetic_mean_continuous_max_x.png)
 
 <sub>The arithmetic mean, agnostic to scale. 𝑥 can be any positive number.</sub>
 
 To make it easier to see what’s going on, I’ll paint means that are close together the same shade:
 
-![Plot of the value of the arithmetic mean painted stripey](./images/special_case_plots/arithmetic_bucketed.png)
+![Plot of the value of the arithmetic mean painted stripey](./generated_visuals/special_case_plots/03_arithmetic_mean.png)
 
 <sub>The arithmetic mean</sub>
 
@@ -43,7 +43,7 @@ Each stripe contains many pairs of numbers which have means within the same rang
 
 Now I’ll plot the geometric mean the same way.
 
-![Plot of the geometric mean](./images/special_case_plots/geometric_mean.png)
+![Plot of the geometric mean](./generated_visuals/special_case_plots/04_geometric_mean.png)
 
 <sub>The geometric mean</sub>
 
@@ -55,25 +55,25 @@ __It’s curved.__ An equal trade off between the two numbers no longer preserve
 
 Because of the _direction_ it curves in, __pairs that are further apart from each other have _lower_ means than those closer together.__ To clarify that, let’s look at the arithmetic and geometric means side by side:
 
-![Plots of the arithmetic and geometric means with a 45° diagonal line](./images/comparison_plots/compare_arith_geo_trace_1.png)
+![Plots of the arithmetic and geometric means with a 45° diagonal line](./handmade_images/comparison_plots/compare_arith_geo_trace_1.png)
 <sub>Arithmetic vs. geometric mean</sub>
 
 Along the line traced in orange above, the two numbers we’re finding the mean of are the same. Whether arithmetic or geometric, the mean of two identical numbers is just that same number. So along the diagonal these images match perfectly, while on either side of it they obviously do not.
 
-![Plots of the arithmetic and geometric means with a 45° diagonal line and a line segment perpendicular to it with a circle at the end](./images/comparison_plots/compare_arith_geo_trace_2.png)
+![Plots of the arithmetic and geometric means with a 45° diagonal line and a line segment perpendicular to it with a circle at the end](./handmade_images/comparison_plots/compare_arith_geo_trace_2.png)
 <sub>Arithmetic vs. geometric mean</sub>
 
 The point circled in teal represents the mean of two numbers with a large difference between them. When using the arithmetic mean (left), this point has the same value as the point 45° away from it on the orange line. But with the geometric mean (right), the values further away from the orange line bend outwards, producing a lower mean for the same point.
 
 Now the harmonic mean:
 
-![Plot of the harmonic mean](./images/special_case_plots/harmonic_mean.png)
+![Plot of the harmonic mean](./generated_visuals/special_case_plots/05_harmonic_mean.png)
 
 <sub>The harmonic mean</sub>
 
 It looks similar to the geometric. Let’s plot them side by side:
 
-![Plots of the geometric and harmonic means](./images/comparison_plots/compare_geo_harm.png)
+![Plots of the geometric and harmonic means](./handmade_images/comparison_plots/compare_geo_harm.png)
 <sub>Geometric vs. harmonic mean</sub>
 
 Again, they’re the same on the diagonal. But off to the side of the diagonal the harmonic mean is _more curved_ than the geometric, and gives even lower results for pairs that are further apart from each other.
@@ -86,7 +86,7 @@ All three Pythagorean means belong to a wider class of functions called [general
 
 The equation for the generalized mean looks like the harmonic mean, but with the exponents replaced by a variable, conventionally _p_:
 
-![Equation for the generalized mean](./images/means_equations/generalized_mean.png)
+![Equation for the generalized mean](./handmade_images/means_equations/generalized_mean.png)
 <sub>The generalized mean</sub>
 
 Or, algorithmically:
@@ -99,11 +99,11 @@ When _p_ is one, the first and last steps have no effect, so you’ve found the 
 
 When _p_ is negative one, this equation simplifies to the equation for the harmonic mean.
 
-![Number line with a 'A' on 1 and 'H' on -1](./images/number_lines_of_p/01_highlight_arith_and_harm.png)
+![Number line with a 'A' on 1 and 'H' on -1](./handmade_images/number_lines_of_p/01_highlight_arith_and_harm.png)
 
-It turns out the geometric mean is the limit of the generalized mean as p approaches zero. I won’t go through the proof for this because it would take too long and because I haven’t read it, but understand that the geometric mean lives in the same neighborhood as zero.
+It turns out the geometric mean is the limit of the generalized mean as _p_ approaches zero. I won’t go through the proof for this because it would take too long and because I haven’t read it, but understand that the geometric mean lives in the same neighborhood as zero.
 
-![Number line with a 'G' on 0](./images/number_lines_of_p/02_highlight_geo.png)
+![Number line with a 'G' on 0](./handmade_images/number_lines_of_p/02_highlight_geo.png)
 
 (There is no generalized mean at zero due to division by zero.)
 
@@ -113,31 +113,31 @@ OK, now we can visualize the generalized mean for any value of _p_.
 
 First, let’s retrace the steps we’ve already taken. We’ll start with the arithmetic mean and go down, pass the geometric mean at zero, and end with the harmonic mean at negative one.
 
-![Number line with an arrow from 1 to -1](./images/number_lines_of_p/03_arith_to_harm.png)
+![Number line with an arrow from 1 to -1](./handmade_images/number_lines_of_p/03_arith_to_harm.png)
 
-![Animated plot of generalized means from 1 to -1](./animations/pos_one_to_neg_one.gif)
+![Animated plot of generalized means from 1 to -1](./generated_visuals/animations/arith_to_harm.gif)
 
 Let’s keep going down.
 
-![Number line with an arrow from -1 to negative infinity](./images/number_lines_of_p/04_harm_to_min.png)
+![Number line with an arrow from -1 to negative infinity](./handmade_images/number_lines_of_p/04_harm_to_min.png)
 
-![Animated plot of generalized means from -1 to -∞](./animations/neg_one_to_neg_inf.gif)
+![Animated plot of generalized means from -1 to -∞](./generated_visuals/animations/harm_to_min.gif)
 
 As p approaches negative infinity, the contours become straight lines:
 
-![Plot of the minimum function](./images/special_case_plots/neg_infinity.png)
+![Plot of the minimum function](./generated_visuals/special_case_plots/06_minimum.png)
 
-<sub>The generalized mean as p approaches negative infinity, i.e., the minimum function</sub>
+<sub>The generalized mean as _p_ approaches negative infinity, i.e., the minimum function</sub>
 
 At this point the generalized mean becomes the function that returns the minimum of the two numbers it’s given. Notice how the result depends entirely on whichever number is lower.
 
-![Number line with 'min' on negative infinity](./images/number_lines_of_p/05_highlight_min.png)
+![Number line with 'min' on negative infinity](./handmade_images/number_lines_of_p/05_highlight_min.png)
 
 OK, let’s go back to the arithmetic mean and travel in the opposite direction.
 
-![Number line with an arrow from 1 to 2](./images/number_lines_of_p/06_arith_to_quad.png)
+![Number line with an arrow from 1 to 2](./handmade_images/number_lines_of_p/06_arith_to_quad.png)
 
-![Animated plot of generalized means from 1 to 2](./animations/pos_one_to_two.gif)
+![Animated plot of generalized means from 1 to 2](./generated_visuals/animations/arith_to_quad.gif)
 
 __It gets lighter.__ The value is always equal to or higher than the arithmetic mean.
 
@@ -145,9 +145,9 @@ __It curves the other way.__ Numbers that are further apart now have _higher_ me
 
 When _p_ is two, the generalized mean is called the quadratic mean.
 
-![Number line with a 'Q' on 2](./images/number_lines_of_p/07_highlight_quad.png)
+![Number line with a 'Q' on 2](./handmade_images/number_lines_of_p/07_highlight_quad.png)
 
-![Plot of the quadratic mean](./images/special_case_plots/quadratic_mean.png)
+![Plot of the quadratic mean](./generated_visuals/special_case_plots/07_quadratic_mean.png)
 
 <sub>The quadratic mean</sub>
 
@@ -157,23 +157,23 @@ Notably, at this point the stripes are perfectly round, but that’s just a side
 
 Let’s keep going up.
 
-![Number line with an arrow from 2 to positive infinity](./images/number_lines_of_p/08_quad_to_max.png)
+![Number line with an arrow from 2 to positive infinity](./handmade_images/number_lines_of_p/08_quad_to_max.png)
 
-![Animated plot of generalized means from 2 to ∞](./animations/two_to_pos_inf.gif)
+![Animated plot of generalized means from 2 to ∞](./generated_visuals/animations/quad_to_max.gif)
 
 As _p_ approaches positive infinity, the contours again become straight lines, and the mean becomes the maximum.
 
-![Plot of the maximum function](./images/special_case_plots/pos_infinity.png)
+![Plot of the maximum function](./generated_visuals/special_case_plots/08_maximum.png)
 
 <sub>The maximum function</sub>
 
-![Number line with 'max' on positive infinity](./images/number_lines_of_p/09_highlight_max.png)
+![Number line with 'max' on positive infinity](./handmade_images/number_lines_of_p/09_highlight_max.png)
 
 Finally, let’s see the whole thing.
 
-![Number line with an arrow both ways between negative infinity and positive infinity](./images/number_lines_of_p/10_full_range.png)
+![Number line with an arrow both ways between negative infinity and positive infinity](./handmade_images/number_lines_of_p/10_full_range.png)
 
-![Animated plot of generalized means from -∞ to ∞](./animations/all.gif)
+![Animated plot of generalized means from -∞ to ∞](./generated_visuals/animations/whole_range.gif)
 
 __You can think of generalized means as leaning in one direction or the other, either rewarding or punishing difference between the numbers they’re given.__
 
